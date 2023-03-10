@@ -1,25 +1,17 @@
 import React from 'react';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { StyleSheet, View, Text, Image } from 'react-native';
 
-import Feed from './Feed';
-import Search from './Search';
-import Profile from './Profile';
-import Notifications from './Notifications';
-import Menu from './Menu';
-
-export default function HomeScreen() {
+export default function Feed() {
     
-    const Tab = createBottomTabNavigator();
+    const imageSource = require("../resources/stupid-icon.png");
 
     return (
-        <Tab.Navigator>
-            <Tab.Screen name = "Feed" component={Feed}/>
-            <Tab.Screen name = "Search" component={Search}/>
-            <Tab.Screen name = "Profile" component={Profile}/>
-            <Tab.Screen name = "Notifications" component={Notifications}/>
-            <Tab.Screen name = "Menu" component={Menu}/>
-        </Tab.Navigator>
+        <View style={styles.mainViewContainer}>
+            <Image style={styles.icon} source={imageSource}/>
+            <Text style={styles.title}>Welcome to the Stupid App</Text>
+            <Text style={styles.contentText}>This is the app's homescreen, where we show everything we have to you after you logged in. 
+                We will update more features in the future</Text>
+        </View>
     )
 }
 
