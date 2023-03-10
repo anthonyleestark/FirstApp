@@ -21,7 +21,6 @@ export default class Signup extends React.Component {
                         onChangeText={(password) => this.setState({password})} 
                         placeholder="Password"/>
                 <Button style={styles.button} title="Login"/>
-                <Text style={styles.link} onPress={() => navigation.navigate("HomeScreen")}>Use as Guest</Text>
             </ScrollView>
         )
     }
